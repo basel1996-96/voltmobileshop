@@ -1,7 +1,16 @@
-.App {
-  text-align: center;
+
+.product {
+ text-align: "right"
 }
 
+.App {
+ 
+  text-align:right;
+ ;
+}
+.dark{
+  width: 50px;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -12,7 +21,9 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
+.div {
+  text-align: center;
+}
 .App-header {
   background-color: #7d7f81;
   min-height: 100vh;
@@ -21,7 +32,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: white;;
 }
 
 .App-link {
@@ -34,27 +45,70 @@ width: 800px;
 font-style: italic;
 font-size: 100px;
 text-align: center;
-margin-left:auto;
-margin-right: auto
+
 
 }
 .image {
   display: block;
   margin-left:auto;
   margin-right: auto;
-  width: 400px;
+  width: 800px;
   
+}
+.image1 {
+  display: block;
+  margin-left:auto;
+  margin-right: auto;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  
+}
+.product {
+  margin-top: 50px;
+  display: fleX;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .discrption{
   background-color: cadetblue;
-  width: 400px;
+  width: 500px;
   font-style: oblique;
   font-size:  60px; 
   text-align: center;
   margin-left:auto;
   margin-right: auto
 }
+.discrption1{
+  background-color: cadetblue;
+  width: 50px;
+  font-style: oblique;
+  font-size:  30px; 
+  text-align: center;
+  margin-left:auto;
+  margin-right: auto
+}
+.discrption2{
+  background-color: rgb(63, 163, 167);
+  width: 200px;
+  font-style: oblique;
+  font-size:  30px; 
+  text-align: center;
+  margin-left:auto;
+  margin-right: auto
+}
+.discrption3{
+  background-color: rgb(56, 140, 143);
+  width: 150px;
+  font-style: oblique;
+  font-size:  30px; 
+  text-align: center;
+  margin-left:auto;
+  margin-right: auto
+  
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -62,4 +116,31 @@ margin-right: auto
   to {
     transform: rotate(360deg);
   }
+}
+
+.tab-list {  border-bottom: 1px solid #ccc;
+  padding-left: 0;
+}
+
+.tab-list-item {
+  display: inline-block;
+  list-style: none;
+  margin-bottom: -1px;
+  padding: 0.5rem 0.75rem;
+}
+
+.tab-list-active {
+  background-color: white;
+  border: solid #ccc;
+  border-width: 1px 1px 0 1px;
+}
+.discrption3{
+  background-color: rgb(63, 163, 167);
+  width: 100px;
+  font-style: oblique;
+  font-size:  30px; 
+  text-align: center;
+  border:1px;
+  border-radius: 100px;
+box-shadow: 2px 2px 30px rgb(173, 97, 97);
 }
