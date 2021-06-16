@@ -144,3 +144,15 @@ text-align: center;
   border-radius: 100px;
 box-shadow: 2px 2px 30px rgb(173, 97, 97);
 }
+.st{
+  padding : 0.5rem;
+
+display : block;
+width: 80% ;
+text-align:center ;
+border: solid 2px rgb(10, 10, 10);
+border-radius: 20px;
+box-shadow: 2px 2px 30px rgb(233, 229, 236);
+margin-bottom: 60px;
+font-size: 15px;
+}

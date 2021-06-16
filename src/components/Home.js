@@ -5,10 +5,10 @@ const Home = () =>
 {
     return(
         <Title>
-    <Basel> Volt Mobile Shop </Basel> 
-    <Discription>What We do ?? </Discription>
+    <Basel> BY Library </Basel> 
+    <Discription>Feeding The Mind </Discription>
     <br></br>
-    <Photo  src = {`https://www.logomoose.com/wp-content/uploads/2017/04/volt.png`} /> <br></br>
+    <Photo  src = {`https://sunscrapers.com/blog/wp-content/uploads/2020/02/UI-component-library-in-React-project.jpeg`} /> <br></br>
     </Title> 
        
     )

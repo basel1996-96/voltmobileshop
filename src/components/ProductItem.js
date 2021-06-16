@@ -6,12 +6,12 @@ const ProductItem= (props) => {
     const product = props.product
 return(
     <div >  
-        <Link to = {`/products/${product.id}`}> 
+        <Link to = {`/products/${product.slug}`}> 
    <Delilas  src = {product.image} />
    </Link> 
-            <p> {product.name} </p>
-            <p> {product.price} JD </p>
-            <DeleteButton variant="outline-primary" deleteProduct= {props.deleteProduct} productID={product.id}/>{' '}
+            <p> Name:{product.firstName} {product.lastName}</p>
+            <p>Membership : {product.membership} </p>
+            <DeleteButton variant="outline-primary"  productID={product.id}/>{' '}
             </div>
 );
 }

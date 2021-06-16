@@ -6,8 +6,9 @@ const NavBar = () => {
     return ( 
       <NavB >         
 
-       <Logo1 to="/"><img class="discrption3" alt="mobile"src= "https://www.logomoose.com/wp-content/uploads/2017/04/volt.png"/></Logo1>
-       <Logo to="/products">Volt Mobile List</Logo > 
+       <Logo1 to="/"><img class="discrption3" alt="mobile"src= "https://i.pinimg.com/originals/dd/64/da/dd64da585bc57cb05e5fd4d8ce873f57.png"/></Logo1>
+       <Logo to="/products">Memeber List</Logo > 
+       <Logo to="/books">Book List</Logo > 
       </NavB>
     );
   };

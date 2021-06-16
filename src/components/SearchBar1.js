@@ -5,17 +5,17 @@ import { SearchBarStyled } from "../styles";
 import { FlexStyle } from "../styles";
 
 
-const SearchBar = (props) => {
+const SearchBar1 = (props) => {
   return (
     
       <FlexStyle>
     <SearchBarStyled
-      placeholder="Search for a member name"
+      placeholder="Search for a book name"
       onChange={(event) => props.setQuery(event.target.value)}
     />
         
- <Link to="/new-product">
-        <button class = "st">Add New Member</button>
+ <Link to="/new-book">
+        <button class = "st">Add New Book</button>
       </Link>
     
       </FlexStyle>
@@ -24,5 +24,4 @@ const SearchBar = (props) => {
   );
 };
 
-export default SearchBar;
-
+export default SearchBar1;

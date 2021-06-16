@@ -8,7 +8,10 @@ import './App.css';
 import ProductlList from "./components/ProductlList";
 import {Route,Switch} from "react-router"
 import NavBar from "./components/NavBar"
-
+import NewProduct from "./components/NewProduct";
+import BookList from "./components/BookList";
+import DetailedBook from "./components/DetailedBook" 
+import NewBook from "./components/NewBook";
 
 
 function App() {
@@ -32,13 +35,34 @@ function App() {
     < Home />
     </Route>
 
+    <Route path="/products/:productSlug/edit">
+          <NewProduct />
+        </Route>
+        <Route path="/books/:bookSlug/edit">
+          <NewBook />
+        </Route>
+        <Route exact path = "/new-book">
+    < NewBook />
+    </Route>
+
+        <Route exact path = "/new-product">
+    < NewProduct />
+    </Route>
   
-    <Route path="/products/:productID">
-   <DetailedIteam 
-   
-   
-    />
-     </Route>
+    <Route path="/products/:productSlug">
+   <DetailedIteam />
+
+   </Route>
+   <Route path="/books/:bookSlug">
+   <DetailedBook />
+
+   </Route>
+   <Route path = "/books">
+      <BookList/>
+  
+   </Route>
+
+    
    <Route path = "/products">
       <ProductlList  
       
