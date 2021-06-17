@@ -18,7 +18,7 @@ const NewProduct = () => {
     id: "",
     image: "",
     membership: "",
-    currentlyBorrowedBooks: "",
+    currentlyBorrowedBooks: [""],
   };
 
   const editedProduct = products.find(

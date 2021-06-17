@@ -9,7 +9,7 @@ const BookBbrrowedBy = (props) => {
 
   let list = props.book.borrowedBy.map((memberID) =>
     products.forEach((_product) => {
-      if (memberID === +_product.id) x.push(_product);
+      if (parseInt(memberID) === parseInt(_product.id)) x.push(_product);
     })
   );
 

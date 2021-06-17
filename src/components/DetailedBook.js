@@ -29,7 +29,7 @@ const DetailedBook = () => {
       <p>
         Availabilty : {book.available === true ? "Availabale" : "Not Available"}
       </p>
-      <p>Borrow History : </p>
+      <p>Borrow History  </p>
 
       <BookBbrrowedBy book={book} />
 

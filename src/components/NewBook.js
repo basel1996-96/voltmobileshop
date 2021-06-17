@@ -17,7 +17,9 @@ const NewBook = () => {
     id: "",
     image: "",
     author: "",
+    genre:[""],
     available: "true",
+    borrowedBy:[""],
   };
 
   const editedBook = books.find((book) => book.slug === bookSlug);
@@ -31,7 +33,9 @@ const NewBook = () => {
       id: "",
       image: "",
       author: "",
+      genre:[""],
       available: true,
+      borrowedBy:[""],
     });
   };
 

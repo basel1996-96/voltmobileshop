@@ -75,7 +75,7 @@ const initialState = {
           action.payload.newbook.id =
             state.books[state.books.length - 1].id + 1;
           action.payload.newbook.slug = slugify(fullname3);
-          
+          console.log(action.payload.newbook)
           return {
             ...state,
             books: [...state.books, action.payload.newbook],
