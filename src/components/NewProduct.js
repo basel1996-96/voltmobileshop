@@ -53,14 +53,14 @@ const NewProduct = () => {
       : dispatch(createProduct(product));
 
     resetForm();
-    history.push("/products");
+    history.push("/members");
   };
 
   return (
     <form onSubmit={handleSubmit}>
-      <FlexStyleVer >
+      <FlexStyleVer>
         <label class="st">
-        first Name:
+          first Name:
           <input
             type="text"
             name="firstName"
@@ -69,7 +69,7 @@ const NewProduct = () => {
           />
         </label>
         <label class="st">
-        Last Name:
+          Last Name:
           <input
             type="text"
             name="lastName"
@@ -89,21 +89,11 @@ const NewProduct = () => {
         </label>
 
         <label class="st">
-        Membership:
+          Membership:
           <input
             type="text"
             name="membership"
             value={product.membership}
-            onChange={handleChange}
-          />
-        </label>
-
-        <label class="st">
-        Currently Borrowed Books :
-          <input
-            type={Array}
-            name="currentlyBorrowedBooks"
-            value={product.currentlyBorrowedBooks}
             onChange={handleChange}
           />
         </label>
@@ -115,6 +105,3 @@ const NewProduct = () => {
 };
 
 export default NewProduct;
-
-
-

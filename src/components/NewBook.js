@@ -12,45 +12,39 @@ const NewBook = () => {
   const books = useSelector((state) => state.books);
 
   const newBook = {
-    
     title: "",
     slug: "",
     id: "",
     image: "",
     author: "",
     available: "true",
-
   };
 
-  const editedBook = books.find(
-    (book) => book.slug === bookSlug
-  );
+  const editedBook = books.find((book) => book.slug === bookSlug);
 
-  const [book, setBook] = useState(
-    editedBook ? editedBook : newBook
-  );
+  const [book, setBook] = useState(editedBook ? editedBook : newBook);
 
   const resetForm = () => {
     setBook({
-        title: "",
-        slug: "",
-        id: "",
-        image: "",
-        author: "",
-        available: "true",
+      title: "",
+      slug: "",
+      id: "",
+      image: "",
+      author: "",
+      available: true,
     });
   };
 
   const handleChange = (event) => {
-    setBook({ ...book, [event.target.name]: event.target.value });
+    if (event.target.name === "genre")
+      setBook({ ...book, genre: event.target.value.split(",") });
+    else setBook({ ...book, [event.target.name]: event.target.value });
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    editedBook
-      ? dispatch(updateBook(book))
-      : dispatch(createBook(book));
+    editedBook ? dispatch(updateBook(book)) : dispatch(createBook(book));
 
     resetForm();
     history.push("/books");
@@ -58,9 +52,9 @@ const NewBook = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <FlexStyleVer >
+      <FlexStyleVer>
         <label class="st">
-       Title:
+          Title:
           <input
             type="text"
             name="title"
@@ -69,7 +63,7 @@ const NewBook = () => {
           />
         </label>
         <label class="st">
-        Author:
+          Author:
           <input
             type="text"
             name="author"
@@ -88,15 +82,14 @@ const NewBook = () => {
           />
         </label>
 
-        
-
         <label class="st">
-        Genre :
+          Genre :
           <input
             type={Array}
             name="genre"
             value={book.genre}
             onChange={handleChange}
+            placeholder="ex : comedy , action "
           />
         </label>
 
@@ -107,6 +100,3 @@ const NewBook = () => {
 };
 
 export default NewBook;
-
-
-

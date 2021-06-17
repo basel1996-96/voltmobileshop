@@ -6,7 +6,7 @@ const products = [
         slug: "aziz-alsaffar",
         image:
           "https://images-ext-1.discordapp.net/external/DHQeEMBF9ImLKlrz8szgIgR-yGf-2MiYHc_VrMDYGY4/%3Fq%3Dtbn%3AANd9GcSFtSlXm-TVOBFUcz9Uj3xjGG1iaZ7WyoFu0kJaaYSNvLJg0xyk9bndM-AxHKndgaof3sE%26usqp%3DCAU/https/encrypted-tbn0.gstatic.com/images",
-        currentlyBorrowedBooks: [3, 9],
+        currentlyBorrowedBooks: [3, 9 ],
         membership: "gold", // can borrow 3 books
       },
       {

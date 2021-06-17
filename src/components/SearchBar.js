@@ -4,25 +4,19 @@ import { Link } from "react-router-dom";
 import { SearchBarStyled } from "../styles";
 import { FlexStyle } from "../styles";
 
-
 const SearchBar = (props) => {
   return (
-    
-      <FlexStyle>
-    <SearchBarStyled
-      placeholder="Search for a member name"
-      onChange={(event) => props.setQuery(event.target.value)}
-    />
-        
- <Link to="/new-product">
-        <button class = "st">Add New Member</button>
+    <FlexStyle>
+      <SearchBarStyled
+        placeholder="Search for a member name"
+        onChange={(event) => props.setQuery(event.target.value)}
+      />
+
+      <Link to="/new-member">
+        <button class="st">Add New Member</button>
       </Link>
-    
-      </FlexStyle>
-
-
+    </FlexStyle>
   );
 };
 
 export default SearchBar;
-

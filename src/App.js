@@ -7,17 +7,22 @@ import Home from "./components/Home"
 import './App.css';
 import ProductlList from "./components/ProductlList";
 import {Route,Switch} from "react-router"
-import NavBar from "./components/NavBar"
+
 import NewProduct from "./components/NewProduct";
 import BookList from "./components/BookList";
 import DetailedBook from "./components/DetailedBook" 
 import NewBook from "./components/NewBook";
+import Apps from "./components/Apps"
+import App1 from "./App1"
+import NavBar from "./components/NavBar";
+
 
 
 function App() {
   const [theme, setTheme] = useState('light');
   const themeToggler = () => {
     theme === 'light' ? setTheme('dark') : setTheme('light')
+    
   }
   
   return (
@@ -35,7 +40,7 @@ function App() {
     < Home />
     </Route>
 
-    <Route path="/products/:productSlug/edit">
+    <Route path="/Members/:productSlug/edit">
           <NewProduct />
         </Route>
         <Route path="/books/:bookSlug/edit">
@@ -45,11 +50,11 @@ function App() {
     < NewBook />
     </Route>
 
-        <Route exact path = "/new-product">
+        <Route exact path = "/new-member">
     < NewProduct />
     </Route>
   
-    <Route path="/products/:productSlug">
+    <Route path="/members/:productSlug">
    <DetailedIteam />
 
    </Route>
@@ -59,11 +64,17 @@ function App() {
    </Route>
    <Route path = "/books">
       <BookList/>
-  
-   </Route>
+      </Route>
+     
+   <Route path = "/books-Reader">
+   <Apps/>
+      </Route>
 
+      <Route path = "/books-Employee">
+      <App1 />
+      </Route>
     
-   <Route path = "/products">
+   <Route path = "/members">
       <ProductlList  
       
       />

@@ -1,37 +1,56 @@
-import {Delilas} from "../styles";
+import { Button, Delilas, FlexStyleVer } from "../styles";
 import { Redirect, useParams } from "react-router-dom";
-import DeleteButton from "../components/DeleteButton"
+import DeleteButton from "../components/DeleteButton";
 import { useSelector } from "react-redux";
-import {StyledButton, ButtonLink } from "../styles";
-
+import { ButtonLink } from "../styles";
+import CurrentlyBorrowedBooks from "./CurrentlyBorrowedBooks";
+import Sellector from "./Sellector";
 
 const DetailedIteam = () => {
-    const products = useSelector((state) => state.products);
+  const products = useSelector((state) => state.products);
 
-    let productSlug =useParams().productSlug
-    const product=products.find(product=>product.slug === productSlug)
-    if (typeof product === "undefined") return <Redirect to="/products" />;
+  let productSlug = useParams().productSlug;
+  const product = products.find((product) => product.slug === productSlug);
+  if (typeof product === "undefined") return <Redirect to="/members" />;
 
-    // const currentBooks = ()=>{
+  const booksNum = (membership) => {
+    if (membership === "platinum") return 5;
+    if (membership === "gold") return 3;
+    if (membership === "silver") return 3;
+  };
 
-    //     return product.currentlyBorrowedBooks.map(book=>`"${book}" ` )
-        
-    // }
- 
-return(
-    <div>
+  const isEigible = () => {
+    if (product.currentlyBorrowedBooks.length >= booksNum(product.membership))
+      return <p>Not Allowed To Borrow Pleas Upgrade your Membership</p>;
+    else return <Sellector product={product} />;
+  };
 
- 
-   <Delilas  src = {product.image} /> 
-      
-            <p>  name : {product.firstName} {product.lastName} </p>
-            <p> Membership : {product.membership}</p>
-            <p> Currently Borrowed Books:{product.currentlyBorrowedBooks} </p>
-            <DeleteButton variant="outline-primary"  productID={product.id}/> 
-            <ButtonLink to={`/products/${product.slug}/edit`}>  <StyledButton>Edit Member</StyledButton>
-        
-        </ButtonLink>
-            </div>
-)
-}
+  return (
+    <>
+      <FlexStyleVer>
+        <Delilas src={product.image} />
+
+        <p>
+          {" "}
+          name : {product.firstName} {product.lastName}{" "}
+        </p>
+        <p> Membership : {product.membership}</p>
+        <p> Currently Borrowed Books: </p>
+        {product.currentlyBorrowedBooks.length === 0 ? (
+          "No Borrowed Books"
+        ) : (
+          <CurrentlyBorrowedBooks product={product} />
+        )}
+
+        {isEigible()}
+
+        <DeleteButton variant="outline-primary" productID={product.id} />
+      </FlexStyleVer>
+      <ButtonLink to={`/members/${product.slug}/edit`}>
+        {" "}
+        <Button>Edit Member</Button>
+      </ButtonLink>
+    </>
+  );
+};
 export default DetailedIteam;
