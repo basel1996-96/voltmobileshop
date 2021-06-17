@@ -15,7 +15,7 @@ const movies = [
       id: 3,
       name: "Mr. Penumbra's 24-Hour Bookstore",
       slug: "mr.-penumbra's-24-hour-bookstore",
-      watch: true,
+      watch: false,
       image:"https://d2wzqffx6hjwip.cloudfront.net/spree/images/attachments/000/024/177/original/9781922079169.jpg?1502236605",
     },
     {

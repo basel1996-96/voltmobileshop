@@ -9,11 +9,11 @@ const ProductItem = (props) => {
       <Link to={`/members/${product.slug}`}>
         <Delilas src={product.image} />
       </Link>
-      <p>
+      <p className="ba">
         {" "}
         Name:{product.firstName} {product.lastName}
       </p>
-      <p>Membership : {product.membership} </p>
+      <p className="ba">Membership : {product.membership} </p>
       <DeleteButton variant="outline-primary" productID={product.id} />{" "}
     </div>
   );

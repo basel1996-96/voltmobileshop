@@ -12,9 +12,9 @@ const BookIteam = (props) => {
       <Link to={`/books/${book.slug}`}>
         <Delilas src={book.image} />
       </Link>
-      <p>Title :{book.title}</p>
-      <p>Author : {book.author} </p>
-      <p>
+      <p className="ba">Title :{book.title}</p>
+      <p className="ba">Author : {book.author} </p>
+      <p className="ba">
         Genre :{" "}
         {book.genre.map((g) =>
           book.genre.length - 1 === book.genre.indexOf(g) ? ` ${g}` : ` ${g} ,`

@@ -18,25 +18,25 @@ const DetailedBook = () => {
     <div>
       <Delilas src={book.image} />
 
-      <p>Title :{book.title}</p>
-      <p>Author : {book.author} </p>
-      <p>
+      <p className="ba">Title :{book.title}</p>
+      <p className="ba">Author : {book.author} </p>
+      <p className="ba">
         Genre :{" "}
         {book.genre.map((g) =>
           book.genre.length - 1 === book.genre.indexOf(g) ? ` ${g}` : ` ${g} ,`
         )}{" "}
       </p>
-      <p>
+      <p className="ba">
         Availabilty : {book.available === true ? "Availabale" : "Not Available"}
-      </p>
-      <p>Borrow History  </p>
+      </p><br></br>
+      <p className="ba">Borrow History  </p>
 
       <BookBbrrowedBy book={book} />
 
       <DeleteButton2 variant="outline-primary" bookID={book.id} />
       <ButtonLink to={`/books/${book.slug}/edit`}>
         {" "}
-        <StyledButton>Edit Member</StyledButton>
+        <StyledButton className="ba">Edit Member</StyledButton>
       </ButtonLink>
     </div>
   );

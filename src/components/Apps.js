@@ -19,8 +19,10 @@ function Apps() {
  return (
   
 
-   <Title1>
-  
+   <Title1><br></br>
+   <img className="pi" src="https://www.jing.fm/clipimg/detail/54-547669_we-can-do-it-motivation-logo-clipart.png"/><br></br>
+   <h1 className="ya">Today's Motivational Quote</h1><br></br>
+  <h1 className="da">** Work Unitil You No Longer Need To Inroduce Your Self ** </h1>
     <AppWrapper>
       
       <GlobalStyle />

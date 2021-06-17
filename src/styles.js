@@ -139,6 +139,7 @@ padding : 15px;
 color : white;
 border:1px ;
 border-radius: 20px;
+box-shadow: 3px 3px 30px wheat;
 
 &.active {
     background-color : green;

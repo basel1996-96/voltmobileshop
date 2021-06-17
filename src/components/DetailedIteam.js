@@ -30,12 +30,12 @@ const DetailedIteam = () => {
       <FlexStyleVer>
         <Delilas src={product.image} />
 
-        <p>
+        <p className="ba">
           {" "}
-          name : {product.firstName} {product.lastName}{" "}
+          Name : {product.firstName} {product.lastName}{" "}
         </p>
-        <p> Membership : {product.membership}</p>
-        <p> Currently Borrowed Books: </p>
+        <p className="ba"> Membership : {product.membership}</p><br></br>
+        <p className="ba"> Currently Borrowed Books </p>
         {product.currentlyBorrowedBooks.length === 0 ? (
           "No Borrowed Books"
         ) : (
